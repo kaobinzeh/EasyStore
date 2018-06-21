@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransactionDataSet" targetNamespace="http://tempuri.org/TransactionDataSet.xsd" xmlns:mstns="http://tempuri.org/TransactionDataSet.xsd" xmlns="http://tempuri.org/TransactionDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="storeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="storeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EasyStore.Properties.Settings.GlobalReference.Default.storeConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_transactionsTableAdapter" GeneratorDataComponentClassName="vw_transactionsTableAdapter" Name="vw_transactions" UserDataComponentName="vw_transactionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="storeConnectionString (Settings)" DbObjectName="store.dbo.vw_transactions" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SN, Product, Category, Price, Quantity, Total, Sold_By, Barcode, Date_Sold FROM dbo.vw_transactions</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SN" DataSetColumn="SN" />
+              <Mapping SourceColumn="Product" DataSetColumn="Product" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Sold_By" DataSetColumn="Sold_By" />
+              <Mapping SourceColumn="Barcode" DataSetColumn="Barcode" />
+              <Mapping SourceColumn="Date_Sold" DataSetColumn="Date_Sold" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransactionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TransactionDataSet" msprop:Generator_UserDSName="TransactionDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_transactions" msprop:Generator_TableClassName="vw_transactionsDataTable" msprop:Generator_TableVarName="tablevw_transactions" msprop:Generator_TablePropName="vw_transactions" msprop:Generator_RowDeletingName="vw_transactionsRowDeleting" msprop:Generator_RowChangingName="vw_transactionsRowChanging" msprop:Generator_RowEvHandlerName="vw_transactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_transactionsRowDeleted" msprop:Generator_UserTableName="vw_transactions" msprop:Generator_RowChangedName="vw_transactionsRowChanged" msprop:Generator_RowEvArgName="vw_transactionsRowChangeEvent" msprop:Generator_RowClassName="vw_transactionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SN" msprop:Generator_ColumnVarNameInTable="columnSN" msprop:Generator_ColumnPropNameInRow="SN" msprop:Generator_ColumnPropNameInTable="SNColumn" msprop:Generator_UserColumnName="SN" type="xs:int" />
+              <xs:element name="Product" msprop:Generator_ColumnVarNameInTable="columnProduct" msprop:Generator_ColumnPropNameInRow="Product" msprop:Generator_ColumnPropNameInTable="ProductColumn" msprop:Generator_UserColumnName="Product">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" />
+              <xs:element name="Sold_By" msprop:Generator_ColumnVarNameInTable="columnSold_By" msprop:Generator_ColumnPropNameInRow="Sold_By" msprop:Generator_ColumnPropNameInTable="Sold_ByColumn" msprop:Generator_UserColumnName="Sold_By">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_Sold" msprop:Generator_ColumnVarNameInTable="columnDate_Sold" msprop:Generator_ColumnPropNameInRow="Date_Sold" msprop:Generator_ColumnPropNameInTable="Date_SoldColumn" msprop:Generator_UserColumnName="Date_Sold" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_transactions" />
+      <xs:field xpath="mstns:SN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

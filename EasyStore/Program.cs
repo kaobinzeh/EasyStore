@@ -14,9 +14,11 @@ namespace EasyStore
         [STAThread]
         static void Main()
         {
+            //Bunifu.Framework.LICENSE()
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Register());
         }
     }
 }
