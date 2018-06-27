@@ -9,8 +9,6 @@ namespace EasyStore.Entities
     [Table("Barcode")]
     public partial class Barcode
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Column("Barcode")]

@@ -50,7 +50,7 @@ namespace EasyStore.Abstract
         {
             return dbSet.Find(id);
         }
-
+        
         public virtual void Insert(TEntity entity)
         {
             dbSet.Add(entity);

@@ -9,8 +9,6 @@ namespace EasyStore.Entities
     [Table("Transaction")]
     public partial class Transaction
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public int Product_Id { get; set; }
@@ -22,6 +20,7 @@ namespace EasyStore.Entities
 
         public string UserId { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime Date { get; set; }
 
         public virtual Product Product { get; set; }

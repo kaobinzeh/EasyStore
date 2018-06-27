@@ -94,6 +94,26 @@ namespace EasyStore
             this.Focus();
             
         }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            pnlAct.Height = btnAddCategory.Height;
+            pnlAct.Top = btnAddCategory.Top;
+            //toggle(sender);
+            AddCategory cat = new AddCategory();
+            this.Hide();
+            cat.Show();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            pnlAct.Height = btnReport.Height;
+            pnlAct.Top = btnReport.Top;
+            //toggle(sender);
+            Report cat = new Report();
+            this.Hide();
+            cat.Show();
+        }
     }
 
 }

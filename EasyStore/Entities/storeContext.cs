@@ -8,7 +8,7 @@ namespace EasyStore.Entities
     public partial class storeContext : DbContext
     {
         public storeContext()
-            : base("name=storeContext1")
+            : base("name=storeContext")
         {
         }
 
@@ -20,7 +20,6 @@ namespace EasyStore.Entities
         public virtual DbSet<Barcode> Barcodes { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Supply> Supplies { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -46,11 +45,6 @@ namespace EasyStore.Entities
                 .HasMany(e => e.Products)
                 .WithRequired(e => e.Category)
                 .HasForeignKey(e => e.Category_Id)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Category>()
-                .HasMany(e => e.Supplies)
-                .WithRequired(e => e.Category)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()

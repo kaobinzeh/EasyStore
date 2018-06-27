@@ -33,7 +33,7 @@
             this.pnlAct = new System.Windows.Forms.Panel();
             this.btnAddProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddCategory = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +43,8 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnLogOut = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtQty = new System.Windows.Forms.TextBox();
             this.btnPay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -57,6 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnReport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlSideBar.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,10 +75,11 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.Teal;
+            this.pnlSideBar.Controls.Add(this.btnReport);
             this.pnlSideBar.Controls.Add(this.pnlAct);
             this.pnlSideBar.Controls.Add(this.btnAddProduct);
             this.pnlSideBar.Controls.Add(this.btnDashboard);
-            this.pnlSideBar.Controls.Add(this.bunifuFlatButton2);
+            this.pnlSideBar.Controls.Add(this.btnAddCategory);
             this.pnlSideBar.Controls.Add(this.pnlLogo);
             this.pnlSideBar.Controls.Add(this.btnAllSales);
             this.pnlSideBar.Controls.Add(this.btnMakeSales);
@@ -149,13 +153,13 @@
             this.btnDashboard.IconVisible = false;
             this.btnDashboard.IconZoom = 90D;
             this.btnDashboard.IsTab = false;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 50);
+            this.btnDashboard.Location = new System.Drawing.Point(8, 50);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDashboard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDashboard.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDashboard.selected = false;
-            this.btnDashboard.Size = new System.Drawing.Size(205, 43);
+            this.btnDashboard.Size = new System.Drawing.Size(197, 43);
             this.btnDashboard.TabIndex = 6;
             this.btnDashboard.Text = "DashBoard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,38 +167,40 @@
             this.btnDashboard.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // bunifuFlatButton2
+            // btnAddCategory
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = null;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(6, 250);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(199, 35);
-            this.bunifuFlatButton2.TabIndex = 4;
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddCategory.BackColor = System.Drawing.Color.Teal;
+            this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddCategory.BorderRadius = 0;
+            this.btnAddCategory.ButtonText = "Add Category";
+            this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddCategory.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddCategory.Iconimage = null;
+            this.btnAddCategory.Iconimage_right = null;
+            this.btnAddCategory.Iconimage_right_Selected = null;
+            this.btnAddCategory.Iconimage_Selected = null;
+            this.btnAddCategory.IconMarginLeft = 0;
+            this.btnAddCategory.IconMarginRight = 0;
+            this.btnAddCategory.IconRightVisible = true;
+            this.btnAddCategory.IconRightZoom = 0D;
+            this.btnAddCategory.IconVisible = true;
+            this.btnAddCategory.IconZoom = 90D;
+            this.btnAddCategory.IsTab = false;
+            this.btnAddCategory.Location = new System.Drawing.Point(9, 250);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Normalcolor = System.Drawing.Color.Teal;
+            this.btnAddCategory.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddCategory.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddCategory.selected = false;
+            this.btnAddCategory.Size = new System.Drawing.Size(193, 47);
+            this.btnAddCategory.TabIndex = 4;
+            this.btnAddCategory.Text = "Add Category";
+            this.btnAddCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddCategory.Textcolor = System.Drawing.Color.White;
+            this.btnAddCategory.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // pnlLogo
             // 
@@ -336,6 +342,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtQty);
             this.panel2.Controls.Add(this.btnPay);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.checkBox2);
@@ -349,6 +357,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 524);
             this.panel2.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 18);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Qty";
+            // 
+            // txtQty
+            // 
+            this.txtQty.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQty.Location = new System.Drawing.Point(48, 272);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(40, 20);
+            this.txtQty.TabIndex = 20;
+            this.txtQty.Text = "1";
             // 
             // btnPay
             // 
@@ -407,6 +435,8 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(259, 444);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(50, 17);
@@ -500,9 +530,9 @@
             this.Recipt.Controls.Add(this.label3);
             this.Recipt.Controls.Add(this.dataGridView1);
             this.Recipt.Controls.Add(this.label2);
-            this.Recipt.Location = new System.Drawing.Point(400, 3);
+            this.Recipt.Location = new System.Drawing.Point(374, 3);
             this.Recipt.Name = "Recipt";
-            this.Recipt.Size = new System.Drawing.Size(336, 509);
+            this.Recipt.Size = new System.Drawing.Size(362, 509);
             this.Recipt.TabIndex = 0;
             // 
             // lblTotal
@@ -528,17 +558,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(333, 422);
+            this.dataGridView1.Size = new System.Drawing.Size(362, 422);
             this.dataGridView1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 4);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(101, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.Size = new System.Drawing.Size(133, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Easy Store Recipt";
             // 
@@ -555,6 +586,41 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReport.BackColor = System.Drawing.Color.Teal;
+            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReport.BorderRadius = 0;
+            this.btnReport.ButtonText = "Report";
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.DisabledColor = System.Drawing.Color.Gray;
+            this.btnReport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReport.Iconimage = null;
+            this.btnReport.Iconimage_right = null;
+            this.btnReport.Iconimage_right_Selected = null;
+            this.btnReport.Iconimage_Selected = null;
+            this.btnReport.IconMarginLeft = 0;
+            this.btnReport.IconMarginRight = 0;
+            this.btnReport.IconRightVisible = true;
+            this.btnReport.IconRightZoom = 0D;
+            this.btnReport.IconVisible = true;
+            this.btnReport.IconZoom = 90D;
+            this.btnReport.IsTab = false;
+            this.btnReport.Location = new System.Drawing.Point(12, 303);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Normalcolor = System.Drawing.Color.Teal;
+            this.btnReport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReport.selected = false;
+            this.btnReport.Size = new System.Drawing.Size(193, 47);
+            this.btnReport.TabIndex = 8;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReport.Textcolor = System.Drawing.Color.White;
+            this.btnReport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // SalesForm
             // 
@@ -591,7 +657,7 @@
         private System.Windows.Forms.Panel pnlAct;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddProduct;
         private Bunifu.Framework.UI.BunifuFlatButton btnDashboard;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddCategory;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
@@ -615,5 +681,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnPay;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtQty;
+        private Bunifu.Framework.UI.BunifuFlatButton btnReport;
     }
 }

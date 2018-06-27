@@ -13,7 +13,6 @@ namespace EasyStore.Entities
         public Category()
         {
             Products = new HashSet<Product>();
-            Supplies = new HashSet<Supply>();
         }
 
         public int Id { get; set; }
@@ -22,14 +21,11 @@ namespace EasyStore.Entities
         [Required]
         public string Category1 { get; set; }
 
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
 
         public DateTime Date { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Supply> Supplies { get; set; }
     }
 }

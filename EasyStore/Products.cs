@@ -26,6 +26,8 @@ namespace EasyStore
             pnlAddProd.Visible = true;
             picBoxBarcode.Visible = false;
             label3.Visible = false;
+            txtRemoveProd.Visible = false;
+            btnRemove.Visible = false;
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -77,6 +79,7 @@ namespace EasyStore
             foreach (var item in category)
             {
                 ddlCategory.AddItem(item.Category1);
+                
                // ddlCategory.Items{ };
 
             }
@@ -89,17 +92,19 @@ namespace EasyStore
 
         private void btnAddProd_Click(object sender, EventArgs e)
         {
+            pnlAddProd.Show();
             pnlAddProd.Visible = true;
             pnlGrid.Visible = false;
-            gridProduct.Visible = false;
             picBoxBarcode.Visible = true;
             label3.Visible = true;
+            txtRemoveProd.Visible = false;
+            btnRemove.Visible = false;
             //gridProduct.Hide();
-            pnlAddProd.Show();
             txtName.text = "Product Name";
             txtQuantity.text = "Quantity(10)";
             txtPrice.text = "Price (100)";
             picBoxBarcode.Refresh();
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -135,9 +140,9 @@ namespace EasyStore
                 };
                 unitOfWork.ProductRepository.Insert(p);
                 unitOfWork.Save();
-                             
+                MessageBox.Show("Product Added Successfullys");     
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error Occured, Unable to generate Barcode");               
             }
@@ -165,11 +170,13 @@ namespace EasyStore
 
         private void btnViewProd_Click(object sender, EventArgs e)
         {
-            pnlGrid.Show();
-            gridProduct.Visible = true;            
             gridProduct.Visible = true;
+            pnlGrid.Show();
+           // pnlRemoveCat.Hide();
             picBoxBarcode.Visible = false;
             label3.Visible = false;
+            txtRemoveProd.Visible = false;
+            btnRemove.Visible = false;
             this.productsTableAdapter.Fill(this.productDataSet.Products);
 
             //pnlAddProd.Hide();
@@ -206,6 +213,65 @@ namespace EasyStore
             Dashboard product = new Dashboard();
             this.Hide();
             product.Show();
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            pnlAct.Height = btnAddCategory.Height;
+            pnlAct.Top = btnAddCategory.Top;
+            //toggle(sender);
+            AddCategory cat = new AddCategory();
+            this.Hide();
+            cat.Show();
+        }
+
+        private void btnRemoveCat_Click(object sender, EventArgs e)
+        {
+            pnlRemoveCat.Show();
+            txtRemoveProd.Visible = true;
+            btnRemove.Visible = true;
+            pnlAddProd.Hide();
+            pnlGrid.Hide();
+           
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (txtRemoveProd.text == "" || txtRemoveProd.text == "Category Name") MessageBox.Show("Please Enter a Valid Category");
+            try
+            {
+                var cat = unitOfWork.ProductRepository.Get(filter: c => c.Prod_Name == txtRemoveProd.text);
+                if (cat != null)
+                {
+                    foreach (var item in cat)
+                    {
+                        unitOfWork.ProductRepository.Delete(item);
+                        unitOfWork.Save();
+                        MessageBox.Show("Product was removed successfully");
+                        return;
+                    }
+                }
+                MessageBox.Show("Product Does not exist");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured, Could not remove Product. Try Again later");
+            }
+        }
+
+        private void txtRemoveProd_Click(object sender, EventArgs e)
+        {
+            txtRemoveProd.text = "";
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            pnlAct.Height = btnReport.Height;
+            pnlAct.Top = btnReport.Top;
+            //toggle(sender);
+            Report cat = new Report();
+            this.Hide();
+            cat.Show();
         }
     }
 }

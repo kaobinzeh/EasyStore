@@ -35,9 +35,9 @@
             this.btnLogOut = new Bunifu.Framework.UI.BunifuImageButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.btnAddCategory = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlAct = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,21 @@
             this.btnAllSales = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMakeSales = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlDasboard = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.sNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwtransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dashBoardTransactionDataSet = new EasyStore.DashBoardTransactionDataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dashboardProductDataSet = new EasyStore.DashboardProductDataSet();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -60,23 +75,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblProdNum = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dashboardProductDataSet = new EasyStore.DashboardProductDataSet();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new EasyStore.DashboardProductDataSetTableAdapters.ProductsTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dashBoardTransactionDataSet = new EasyStore.DashBoardTransactionDataSet();
-            this.vwtransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_transactionsTableAdapter = new EasyStore.DashBoardTransactionDataSetTableAdapters.vw_transactionsTableAdapter();
-            this.sNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogOut)).BeginInit();
@@ -84,6 +85,12 @@
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDasboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwtransactionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashBoardTransactionDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardProductDataSet)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel6.SuspendLayout();
@@ -93,12 +100,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardProductDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashBoardTransactionDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwtransactionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -152,9 +153,10 @@
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.Teal;
+            this.pnlSideBar.Controls.Add(this.btnReport);
+            this.pnlSideBar.Controls.Add(this.btnAddCategory);
             this.pnlSideBar.Controls.Add(this.btnAddProduct);
             this.pnlSideBar.Controls.Add(this.btnDashboard);
-            this.pnlSideBar.Controls.Add(this.bunifuFlatButton2);
             this.pnlSideBar.Controls.Add(this.pnlLogo);
             this.pnlSideBar.Controls.Add(this.btnAllSales);
             this.pnlSideBar.Controls.Add(this.btnMakeSales);
@@ -162,6 +164,41 @@
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(205, 564);
             this.pnlSideBar.TabIndex = 1;
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAddCategory.BackColor = System.Drawing.Color.Teal;
+            this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddCategory.BorderRadius = 0;
+            this.btnAddCategory.ButtonText = "Add Category";
+            this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddCategory.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddCategory.Iconimage = null;
+            this.btnAddCategory.Iconimage_right = null;
+            this.btnAddCategory.Iconimage_right_Selected = null;
+            this.btnAddCategory.Iconimage_Selected = null;
+            this.btnAddCategory.IconMarginLeft = 0;
+            this.btnAddCategory.IconMarginRight = 0;
+            this.btnAddCategory.IconRightVisible = true;
+            this.btnAddCategory.IconRightZoom = 0D;
+            this.btnAddCategory.IconVisible = true;
+            this.btnAddCategory.IconZoom = 90D;
+            this.btnAddCategory.IsTab = false;
+            this.btnAddCategory.Location = new System.Drawing.Point(6, 259);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Normalcolor = System.Drawing.Color.Teal;
+            this.btnAddCategory.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddCategory.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddCategory.selected = false;
+            this.btnAddCategory.Size = new System.Drawing.Size(193, 47);
+            this.btnAddCategory.TabIndex = 7;
+            this.btnAddCategory.Text = "Add Category";
+            this.btnAddCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddCategory.Textcolor = System.Drawing.Color.White;
+            this.btnAddCategory.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // btnAddProduct
             // 
@@ -232,39 +269,6 @@
             this.btnDashboard.Textcolor = System.Drawing.Color.White;
             this.btnDashboard.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = null;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(6, 250);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(199, 35);
-            this.bunifuFlatButton2.TabIndex = 4;
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // pnlLogo
             // 
@@ -388,6 +392,134 @@
             this.pnlDasboard.Name = "pnlDasboard";
             this.pnlDasboard.Size = new System.Drawing.Size(730, 508);
             this.pnlDasboard.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(124, 192);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 19);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Products";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(517, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 19);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "All Sales";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sNDataGridViewTextBoxColumn,
+            this.productDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn1,
+            this.totalDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.vwtransactionsBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(374, 226);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(350, 245);
+            this.dataGridView2.TabIndex = 4;
+            // 
+            // sNDataGridViewTextBoxColumn
+            // 
+            this.sNDataGridViewTextBoxColumn.DataPropertyName = "SN";
+            this.sNDataGridViewTextBoxColumn.HeaderText = "SN";
+            this.sNDataGridViewTextBoxColumn.Name = "sNDataGridViewTextBoxColumn";
+            this.sNDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            this.productDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn1
+            // 
+            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
+            this.quantityDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vwtransactionsBindingSource
+            // 
+            this.vwtransactionsBindingSource.DataMember = "vw_transactions";
+            this.vwtransactionsBindingSource.DataSource = this.dashBoardTransactionDataSet;
+            // 
+            // dashBoardTransactionDataSet
+            // 
+            this.dashBoardTransactionDataSet.DataSetName = "DashBoardTransactionDataSet";
+            this.dashBoardTransactionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.prodNameDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 226);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(347, 245);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prodNameDataGridViewTextBoxColumn
+            // 
+            this.prodNameDataGridViewTextBoxColumn.DataPropertyName = "Prod_Name";
+            this.prodNameDataGridViewTextBoxColumn.HeaderText = "Prod_Name";
+            this.prodNameDataGridViewTextBoxColumn.Name = "prodNameDataGridViewTextBoxColumn";
+            this.prodNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.dashboardProductDataSet;
+            // 
+            // dashboardProductDataSet
+            // 
+            this.dashboardProductDataSet.DataSetName = "DashboardProductDataSet";
+            this.dashboardProductDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel5
             // 
@@ -545,137 +677,48 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Products";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.prodNameDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.productsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 226);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(347, 245);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sNDataGridViewTextBoxColumn,
-            this.productDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn1,
-            this.totalDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.vwtransactionsBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(374, 226);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(350, 245);
-            this.dataGridView2.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(517, 192);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 19);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "All Sales";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(124, 192);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 19);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Products";
-            // 
-            // dashboardProductDataSet
-            // 
-            this.dashboardProductDataSet.DataSetName = "DashboardProductDataSet";
-            this.dashboardProductDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.dashboardProductDataSet;
-            // 
             // productsTableAdapter
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prodNameDataGridViewTextBoxColumn
-            // 
-            this.prodNameDataGridViewTextBoxColumn.DataPropertyName = "Prod_Name";
-            this.prodNameDataGridViewTextBoxColumn.HeaderText = "Prod_Name";
-            this.prodNameDataGridViewTextBoxColumn.Name = "prodNameDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // dashBoardTransactionDataSet
-            // 
-            this.dashBoardTransactionDataSet.DataSetName = "DashBoardTransactionDataSet";
-            this.dashBoardTransactionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwtransactionsBindingSource
-            // 
-            this.vwtransactionsBindingSource.DataMember = "vw_transactions";
-            this.vwtransactionsBindingSource.DataSource = this.dashBoardTransactionDataSet;
             // 
             // vw_transactionsTableAdapter
             // 
             this.vw_transactionsTableAdapter.ClearBeforeFill = true;
             // 
-            // sNDataGridViewTextBoxColumn
+            // btnReport
             // 
-            this.sNDataGridViewTextBoxColumn.DataPropertyName = "SN";
-            this.sNDataGridViewTextBoxColumn.HeaderText = "SN";
-            this.sNDataGridViewTextBoxColumn.Name = "sNDataGridViewTextBoxColumn";
-            this.sNDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productDataGridViewTextBoxColumn
-            // 
-            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
-            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
-            this.productDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn1
-            // 
-            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
-            this.quantityDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnReport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReport.BackColor = System.Drawing.Color.Teal;
+            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReport.BorderRadius = 0;
+            this.btnReport.ButtonText = "Report";
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.DisabledColor = System.Drawing.Color.Gray;
+            this.btnReport.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReport.Iconimage = null;
+            this.btnReport.Iconimage_right = null;
+            this.btnReport.Iconimage_right_Selected = null;
+            this.btnReport.Iconimage_Selected = null;
+            this.btnReport.IconMarginLeft = 0;
+            this.btnReport.IconMarginRight = 0;
+            this.btnReport.IconRightVisible = true;
+            this.btnReport.IconRightZoom = 0D;
+            this.btnReport.IconVisible = true;
+            this.btnReport.IconZoom = 90D;
+            this.btnReport.IsTab = false;
+            this.btnReport.Location = new System.Drawing.Point(9, 312);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Normalcolor = System.Drawing.Color.Teal;
+            this.btnReport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReport.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReport.selected = false;
+            this.btnReport.Size = new System.Drawing.Size(193, 47);
+            this.btnReport.TabIndex = 8;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReport.Textcolor = System.Drawing.Color.White;
+            this.btnReport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Dashboard
             // 
@@ -700,6 +743,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDasboard.ResumeLayout(false);
             this.pnlDasboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwtransactionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashBoardTransactionDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardProductDataSet)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -712,12 +761,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardProductDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashBoardTransactionDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwtransactionsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -729,7 +772,6 @@
         private System.Windows.Forms.Panel pnlSideBar;
         private Bunifu.Framework.UI.BunifuFlatButton btnMakeSales;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddProduct;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton btnAllSales;
         private Bunifu.Framework.UI.BunifuFlatButton btnDashboard;
         private System.Windows.Forms.Panel pnlLogo;
@@ -771,5 +813,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddCategory;
+        private Bunifu.Framework.UI.BunifuFlatButton btnReport;
     }
 }

@@ -156,7 +156,7 @@ namespace EasyStore
                 return false;
             }
 
-            if (txtConfirmPassword.Text == txtPassword.Text)
+            if (txtConfirmPassword.Text != txtPassword.Text)
             {
                 MessageBox.Show("Password and confirm Password must match");
                 return false;

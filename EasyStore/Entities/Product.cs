@@ -14,8 +14,6 @@ namespace EasyStore.Entities
             Transactions = new HashSet<Transaction>();
         }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -26,6 +24,7 @@ namespace EasyStore.Entities
         [Column(TypeName = "money")]
         public decimal Price { get; set; }
 
+        [Required]
         public string Barcode { get; set; }
 
         public int Category_Id { get; set; }
